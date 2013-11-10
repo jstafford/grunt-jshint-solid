@@ -27,14 +27,10 @@ module.exports = function (grunt) {
 
   grunt.loadTasks('tasks');
 
-  // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-complexity');
 
-  grunt.registerTask('test', ['jshint-solid']);
-
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'jshint-solid', 'test', 'complexity']);
+  grunt.registerTask('default', ['jshint', 'jshint-solid', 'complexity']);
 
 };

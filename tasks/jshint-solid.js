@@ -8,14 +8,27 @@
 
 'use strict';
 
-var check = require('check-types');
+var fs = require('fs');
 var solid = require('jshint-solid');
 
 module.exports = function (grunt) {
 
   var title = 'Checks how solid your .jshintrc file is';
   grunt.registerTask('jshint-solid', title, function () {
-    grunt.log.writeln('jshintrc is solid');
+    var filename = '.jshintrc';
+    if (!fs.existsSync(filename)) {
+      grunt.log.error('cannot find', filename);
+      return false;
+    }
+    var quality = solid(filename);
+    if (quality < 50) {
+      grunt.log.error(filename, 'only sets', quality + '% of settings');
+    } else if (quality < 90) {
+      grunt.log.writeln(filename, 'sets', quality + '% of settings');
+    } else {
+      grunt.log.ok(filename, 'is solid, congrats');
+    }
+    return true;
   });
 
 };
