@@ -1,46 +1,27 @@
-# grunt-clean-console
+# grunt-jshint-solid
 
-> Quick JavaScript error sanity check for deployed pages using
-[clean-console](https://github.com/bahmutov/clean-console)
+> Analyzes your .jshintrc settings file to see how strict they are
+[jshint-solid](https://github.com/bahmutov/jshint-solid)
 
-[![NPM][grunt-clean-console-icon]][grunt-clean-console-url]
+[![NPM][grunt-jshint-solid-icon]][grunt-jshint-solid-url]
 
-[![Build status][grunt-clean-console-ci-image]][grunt-clean-console-ci-url]
-[![dependencies][grunt-clean-console-dependencies-image]][grunt-clean-console-dependencies-url]
-[![devdependencies][grunt-clean-console-devdependencies-image]][grunt-clean-console-devdependencies-url]
+[![Build status][grunt-jshint-solid-ci-image]][grunt-jshint-solid-ci-url]
+[![dependencies][grunt-jshint-solid-dependencies-image]][grunt-jshint-solid-dependencies-url]
+[![devdependencies][grunt-jshint-solid-devdependencies-image]][grunt-jshint-solid-devdependencies-url]
 
 [![endorse][endorse-image]][endorse-url]
 
 ## Install
 
 ```shell
-npm install grunt-clean-console --save-dev
+npm install grunt-jshint-solid --save-dev
 ```
 
-**note** this does not install phantomjs, assumes it is in the path.
-
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+Once the plugin has been installed, add it to default grunt pipeline
 
 ```js
-grunt.loadNpmTasks('grunt-clean-console');
-grunt.initConfig({
-  'clean-console': {
-    all: {
-      options: {
-        url: 'dist/index.html'
-      }
-    }
-  }
-})
-```
-
-**url** could point to a local file, a remote url or a list of urls
-```js
-// test local file
-url: 'dist/index.html'
-
-// test several urls, local and remote
-url: ['dist/index.html', 'http://localhost:8080/index.html']
+grunt.loadNpmTasks('grunt-jshint-solid');
+grunt.registerTask('default', ['jshint', 'jshint-solid']);
 ```
 
 ## Small print
@@ -51,13 +32,13 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 
 Support: if you find any problems with this module, email / tweet / open issue on Github
 
-[grunt-clean-console-icon]: https://nodei.co/npm/grunt-clean-console.png?downloads=true
-[grunt-clean-console-url]: https://npmjs.org/package/grunt-clean-console
-[grunt-clean-console-ci-image]: https://travis-ci.org/bahmutov/grunt-clean-console.png?branch=master
-[grunt-clean-console-ci-url]: https://travis-ci.org/bahmutov/grunt-clean-console
-[grunt-clean-console-dependencies-image]: https://david-dm.org/bahmutov/grunt-clean-console.png
-[grunt-clean-console-dependencies-url]: https://david-dm.org/bahmutov/grunt-clean-console
-[grunt-clean-console-devdependencies-image]: https://david-dm.org/bahmutov/grunt-clean-console/dev-status.png
-[grunt-clean-console-devdependencies-url]: https://david-dm.org/bahmutov/grunt-clean-console#info=devDependencies
+[grunt-jshint-solid-icon]: https://nodei.co/npm/grunt-jshint-solid.png?downloads=true
+[grunt-jshint-solid-url]: https://npmjs.org/package/grunt-jshint-solid
+[grunt-jshint-solid-ci-image]: https://travis-ci.org/bahmutov/grunt-jshint-solid.png?branch=master
+[grunt-jshint-solid-ci-url]: https://travis-ci.org/bahmutov/grunt-jshint-solid
+[grunt-jshint-solid-dependencies-image]: https://david-dm.org/bahmutov/grunt-jshint-solid.png
+[grunt-jshint-solid-dependencies-url]: https://david-dm.org/bahmutov/grunt-jshint-solid
+[grunt-jshint-solid-devdependencies-image]: https://david-dm.org/bahmutov/grunt-jshint-solid/dev-status.png
+[grunt-jshint-solid-devdependencies-url]: https://david-dm.org/bahmutov/grunt-jshint-solid#info=devDependencies
 [endorse-image]: https://api.coderwall.com/bahmutov/endorsecount.png
 [endorse-url]: https://coderwall.com/bahmutov

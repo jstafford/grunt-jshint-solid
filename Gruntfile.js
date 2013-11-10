@@ -1,6 +1,6 @@
 /*
- * grunt-clean-console
- * https://github.com/bahmutov/grunt-clean-console
+ * grunt-jshint-solid
+ * https://github.com/bahmutov/grunt-jshint-solid
  *
  * Copyright (c) 2013 Gleb Bahmutov
  * Licensed under the MIT license.
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 
     complexity: grunt.file.readJSON('complexity.json'),
 
-    'clean-console': {
+    'jshint-solid': {
       all: {
         options: {
           urls: ['test/index.html']
@@ -33,7 +33,6 @@ module.exports = function (grunt) {
     }
   });
 
-  // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
@@ -41,11 +40,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-complexity');
 
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-  // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean-console']);
+  grunt.registerTask('test', ['jshint-solid']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test', 'complexity']);
+  grunt.registerTask('default', ['jshint', 'jshint-solid', 'test', 'complexity']);
 
 };

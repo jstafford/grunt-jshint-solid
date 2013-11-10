@@ -1,8 +1,8 @@
 {
-  "name": "grunt-clean-console",
-  "description": "Quick JavaScript error sanity check for deployed pages",
+  "name": "grunt-jshint-solid",
+  "description": "Analyzes your .jshintrc settings file to see how strict they are",
   "version": "0.0.1",
-  "homepage": "https://github.com/bahmutov/grunt-clean-console",
+  "homepage": "https://github.com/bahmutov/grunt-jshint-solid",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bahmutov/grunt-clean-console.git"
+    "url": "git://github.com/bahmutov/grunt-jshint-solid.git"
   },
   "bugs": {
-    "url": "https://github.com/bahmutov/grunt-clean-console/issues"
+    "url": "https://github.com/bahmutov/grunt-jshint-solid/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/bahmutov/grunt-clean-console/blob/master/LICENSE-MIT"
+      "url": "https://github.com/bahmutov/grunt-jshint-solid/blob/master/LICENSE"
     }
   ],
   "main": "Gruntfile.js",
@@ -42,12 +42,13 @@
   "keywords": [
     "gruntplugin",
     "JavaScript",
-    "error",
-    "deploy"
+    "jshint",
+    "solid",
+    "quality"
   ],
   "dependencies": {
     "check-types": "~1.1.0",
-    "clean-console": "0.0.6",
+    "jshint-solid": "0.0.6",
     "q": "~0.9.7",
     "qx": "~0.2.4"
   }
