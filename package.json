@@ -26,7 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt && grunt test"
+    "test": "grunt"
   },
   "pre-commit": "grunt",
   "devDependencies": {
