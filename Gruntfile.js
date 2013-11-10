@@ -22,15 +22,7 @@ module.exports = function (grunt) {
       },
     },
 
-    complexity: grunt.file.readJSON('complexity.json'),
-
-    'jshint-solid': {
-      all: {
-        options: {
-          urls: ['test/index.html']
-        }
-      }
-    }
+    complexity: grunt.file.readJSON('complexity.json')
   });
 
   grunt.loadTasks('tasks');
