@@ -24,6 +24,8 @@ grunt.loadNpmTasks('grunt-jshint-solid');
 grunt.registerTask('default', ['jshint', 'jshint-solid']);
 ```
 
+Plugin looks for *.jshintrc* file in the project's root folder.
+
 ## Small print
 
 Author: Gleb Bahmutov &copy; 2013
