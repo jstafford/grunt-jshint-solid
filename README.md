@@ -1,7 +1,8 @@
 # grunt-jshint-solid
 
 > Analyzes your .jshintrc settings file to see how strict they are using
-[jshint-solid](https://github.com/bahmutov/jshint-solid)
+
+[grunt-jshint-solid](https://github.com/bahmutov/grunt-jshint-solid)
 
 [![NPM][grunt-jshint-solid-icon]][grunt-jshint-solid-url]
 
