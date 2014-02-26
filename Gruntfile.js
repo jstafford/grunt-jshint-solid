@@ -19,18 +19,23 @@ module.exports = function (grunt) {
       ],
       options: {
         jshintrc: '.jshintrc',
-      },
+      }
     },
 
-    complexity: grunt.file.readJSON('complexity.json')
+    complexity: grunt.file.readJSON('complexity.json'),
+
+    'nice-package': {
+      all: {}
+    }
   });
 
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-complexity');
+  grunt.loadNpmTasks('grunt-nice-package');
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'jshint-solid', 'complexity']);
+  grunt.registerTask('default', ['jshint', 'jshint-solid', 'complexity', 'nice-package']);
 
 };
