@@ -1,7 +1,7 @@
 {
   "name": "grunt-jshint-solid",
   "description": "Analyzes your .jshintrc settings file to see how strict they are",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "check-types": "~1.1.1",
-    "jshint-solid": "~0.1.1"
+    "jshint-solid": "~0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
