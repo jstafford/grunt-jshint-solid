@@ -25,7 +25,11 @@ module.exports = function (grunt) {
     complexity: grunt.file.readJSON('complexity.json'),
 
     'nice-package': {
-      all: {}
+      all: {
+        options: {
+          blankLine: true
+        }
+      }
     }
   });
 
