@@ -12,8 +12,8 @@
   },
   "contributors": [],
   "dependencies": {
-    "jshint-solid": "0.2.2",
-    "check-types": "2.2.0"
+    "check-types": "2.2.0",
+    "jshint-solid": "0.2.2"
   },
   "devDependencies": {
     "grunt": "0.4.5",
