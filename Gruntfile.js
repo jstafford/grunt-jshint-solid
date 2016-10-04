@@ -24,22 +24,14 @@ module.exports = function (grunt) {
 
     complexity: grunt.file.readJSON('complexity.json'),
 
-    'nice-package': {
-      all: {
-        options: {
-          blankLine: true
-        }
-      }
-    }
   });
 
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-complexity');
-  grunt.loadNpmTasks('grunt-nice-package');
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'jshint-solid', 'complexity', 'nice-package']);
+  grunt.registerTask('default', ['jshint', 'jshint-solid', 'complexity']);
 
 };
